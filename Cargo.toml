@@ -21,6 +21,6 @@ stdweb = "0.4"
 wasm-bindgen = "0.2.69"
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies.websocket]
-version = "0.20"
+websocket = "0.26.5"
 default-features = false
 features = ["sync", "sync-ssl"]
