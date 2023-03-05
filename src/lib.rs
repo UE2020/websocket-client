@@ -273,7 +273,7 @@ impl Socket {
         // In theory, NetworkStream *should* imply AsTcpStream, but that doesn't seem
         // to work in practice. Possibly a bug in `websocket`.
         client.stream_ref().as_tcp().set_nodelay(true)?;
-        //client.stream_ref().as_tcp().set_nonblocking(true)?;
+        client.stream_ref().as_tcp().set_nonblocking(true)?;
 
         Ok(Socket {
             client,
